@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Book Management",
-  description: "Book Management is used to solution for the book borrowing",
+  title: "Book Hub - Discover & Borrow Books",
+  description: "Book Hub is your ultimate solution for book reading, purchasing, and borrowing.",
 };
 
 export default function RootLayout({ children }) {

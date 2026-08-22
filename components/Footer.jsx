@@ -18,7 +18,7 @@ const Footer = () => {
                         <div className="flex items-center gap-2">
                               <FaBookOpen className="text-blue-400 text-lg sm:text-xl" />
                               <span className="text-base font-bold tracking-tight text-white">
-                                    Book Management
+                                    Book Hub
                               </span>
                         </div>
 
@@ -26,7 +26,7 @@ const Footer = () => {
                         <div className="flex items-center gap-1.5 text-xs text-gray-400">
                               <span>Crafted with</span>
                               <FaHeart className="text-red-500 text-xs" />
-                              <span>&copy; {new Date().getFullYear()} Book Management Solution. All rights reserved.</span>
+                              <span>&copy; {new Date().getFullYear()} Book Hub Platform. All rights reserved.</span>
                         </div>
                   </div>
             </footer>

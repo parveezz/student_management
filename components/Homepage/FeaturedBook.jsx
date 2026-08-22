@@ -100,16 +100,10 @@ const FeaturedBook = () => {
                                     <em> Where are we going?</em>
                               </p>
 
-                              {/* Action Buttons */}
-                              <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
-                                    <button className="flex w-full items-center justify-center gap-2 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 px-4 py-3 text-sm font-bold text-white shadow-md shadow-purple-600/20 transition hover:from-purple-500 hover:to-indigo-500 active:scale-[0.99] sm:w-fit cursor-pointer">
-                                          <FaShoppingCart className="text-white" />
+                              {/* Action Button */}
+                              <div className="mt-6 sm:mt-8">
+                                    <button className="flex w-full items-center justify-center rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 px-6 py-3.5 text-sm font-bold text-white shadow-md shadow-purple-600/20 transition hover:from-purple-500 hover:to-indigo-500 active:scale-[0.99] sm:w-fit cursor-pointer">
                                           <span>BUY BOOK ($24.99)</span>
-                                    </button>
-
-                                    <button className="flex w-full items-center justify-center gap-2 rounded-md border border-gray-300 bg-white px-4 py-3 text-sm font-bold text-gray-900 shadow-sm transition hover:bg-gray-200 active:scale-[0.99] sm:w-fit cursor-pointer">
-                                          <FaBookOpen className="text-gray-800" />
-                                          <span>BORROW BOOK REQUEST</span>
                                     </button>
                               </div>
 

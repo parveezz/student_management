@@ -276,7 +276,7 @@ const Page = () => {
                                     src="/login-cover.jpg"
                                     alt="Cozy library reading room"
                                     fill
-                                    sizes="50vw"
+                                    sizes="(max-width: 1024px) 100vw, 50vw"
                                     className="object-cover"
                                     priority
                               />

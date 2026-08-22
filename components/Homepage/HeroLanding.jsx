@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa6";
-import { FaUsers, FaSearch, FaTimes } from "react-icons/fa";
+import { FaUsers, FaSearch, FaTimes, FaStar } from "react-icons/fa";
 
 const HeroLanding = () => {
       const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -87,10 +87,13 @@ const HeroLanding = () => {
                         {/* ================= LEFT CONTENT ================= */}
                         <div className="flex flex-col justify-between lg:col-span-7">
 
-                              {/* Subtitle tag */}
+                              {/* Subtitle tag with two react-icons stars with shine effect */}
                               <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-blue-300 mb-6">
-                                    <span className="text-yellow-400 font-bold">✦</span>
-                                    <span className="tracking-wide">Explore endless worlds through stories.</span>
+                                    <div className="flex items-center gap-1 text-yellow-400 animate-pulse">
+                                          <FaStar className="text-xs drop-shadow-[0_0_10px_rgba(250,204,21,1)] text-yellow-300" />
+                                          <FaStar className="text-[10px] drop-shadow-[0_0_8px_rgba(250,204,21,0.8)] text-yellow-400" />
+                                    </div>
+                                    <span className="tracking-wide text-blue-200">Explore endless worlds through stories.</span>
                               </div>
 
                               {/* Main Headline */}
@@ -110,10 +113,10 @@ const HeroLanding = () => {
                               {/* MOBILE ONLY: IMAGE PLACED RIGHT AFTER FIND A BOOK BUTTON */}
                               <div className="block lg:hidden mt-8 relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-white/15 bg-gradient-to-b from-blue-950 to-indigo-950 shadow-2xl">
                                     <Image
-                                          src="/dont-turn.jpg"
+                                          src="/reader-girl.jpg"
                                           alt="Reader discovering new books"
                                           fill
-                                          sizes="100vw"
+                                          sizes="(max-width: 1024px) 100vw, 50vw"
                                           className="object-cover"
                                           priority
                                     />
@@ -164,7 +167,7 @@ const HeroLanding = () => {
                               {/* DESKTOP READER IMAGE CARD */}
                               <div className="hidden lg:block relative aspect-[3/4] w-full overflow-hidden rounded-3xl border border-white/15 bg-gradient-to-b from-blue-950 to-indigo-950 shadow-2xl">
                                     <Image
-                                          src="/dont-turn.jpg"
+                                          src="/reader-girl.jpg"
                                           alt="Reader discovering new books"
                                           fill
                                           sizes="40vw"

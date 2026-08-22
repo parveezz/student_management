@@ -30,7 +30,7 @@ const Navbar = () => {
                               >
                                     <FaBookOpen className="shrink-0 text-black text-base sm:text-lg" />
                                     <span className="truncate max-w-[180px] sm:max-w-none font-bold tracking-tight">
-                                          Book Management
+                                          Book Hub
                                     </span>
                               </Link>
 

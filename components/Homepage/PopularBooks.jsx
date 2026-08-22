@@ -103,22 +103,14 @@ const PopularBooks = () => {
                                           </p>
                                     </div>
 
-                                    {/* Buy and Borrow Buttons */}
-                                    <div className="mt-3 grid grid-cols-2 gap-1.5 pt-2 border-t border-gray-800">
+                                    {/* Buy Button Only */}
+                                    <div className="mt-3 pt-2 border-t border-gray-800">
                                           <button
                                                 onClick={() => handleBuy(book.title, book.price)}
-                                                className="flex items-center justify-center rounded bg-gradient-to-r from-purple-600 to-indigo-600 px-2 py-1.5 text-[11px] font-extrabold tracking-wide text-white transition hover:from-purple-500 hover:to-indigo-500 shadow-md shadow-purple-600/20 cursor-pointer"
+                                                className="flex w-full items-center justify-center rounded bg-gradient-to-r from-purple-600 to-indigo-600 px-3 py-2 text-xs font-extrabold tracking-wide text-white transition hover:from-purple-500 hover:to-indigo-500 shadow-md shadow-purple-600/20 cursor-pointer"
                                                 title={`Buy for ${book.price}`}
                                           >
                                                 Buy {book.price}
-                                          </button>
-
-                                          <button
-                                                onClick={() => handleBorrow(book.title, book.borrowPrice)}
-                                                className="flex items-center justify-center rounded border border-gray-700 bg-gray-800 px-2 py-1.5 text-[11px] font-extrabold tracking-wide text-gray-200 transition hover:bg-gray-700 hover:text-white cursor-pointer"
-                                                title={`Borrow for ${book.borrowPrice}`}
-                                          >
-                                                Borrow
                                           </button>
                                     </div>
                               </div>
