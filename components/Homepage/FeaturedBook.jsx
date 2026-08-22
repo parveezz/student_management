@@ -1,11 +1,21 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
-import { FaBookOpen } from "react-icons/fa";
+import { FaBookOpen, FaShoppingCart } from "react-icons/fa";
 
 const FeaturedBook = () => {
       return (
-            <section className="mx-auto max-w-7xl px-4 pt-20 sm:px-6 sm:pt-24 lg:pt-28">
-                  <div className="grid min-h-[520px] grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14">
+            <section className="relative w-full overflow-hidden px-6 pt-14 pb-10 sm:px-10 sm:pt-16 lg:pt-20">
+                  {/* Atmospheric Background Image Overlay */}
+                  <div
+                        className="absolute inset-0 z-0 bg-cover bg-center opacity-20 blur-2xl scale-110 pointer-events-none"
+                        style={{ backgroundImage: "url('/origin.jpg')" }}
+                        aria-hidden="true"
+                  />
+                  <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#080b14]/70 via-[#080b14]/50 to-[#080b14] pointer-events-none" />
+
+                  <div className="relative z-10 grid min-h-[520px] grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14">
 
                         {/* Book Image - Top on Mobile, Right on Desktop */}
                         <div className="relative flex items-center justify-center overflow-hidden py-4 sm:py-8 sm:overflow-visible order-first lg:order-last">
@@ -90,11 +100,18 @@ const FeaturedBook = () => {
                                     <em> Where are we going?</em>
                               </p>
 
-                              {/* Action Button */}
-                              <button className="mt-6 flex w-full items-center justify-center gap-2 rounded-md border border-gray-300 bg-white px-5 py-3 text-sm font-bold text-gray-900 shadow-sm transition hover:bg-gray-200 active:scale-[0.99] sm:mt-8 sm:w-fit">
-                                    <FaBookOpen className="text-gray-800" />
-                                    <span>BORROW BOOK REQUEST</span>
-                              </button>
+                              {/* Action Buttons */}
+                              <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
+                                    <button className="flex w-full items-center justify-center gap-2 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 px-4 py-3 text-sm font-bold text-white shadow-md shadow-purple-600/20 transition hover:from-purple-500 hover:to-indigo-500 active:scale-[0.99] sm:w-fit cursor-pointer">
+                                          <FaShoppingCart className="text-white" />
+                                          <span>BUY BOOK ($24.99)</span>
+                                    </button>
+
+                                    <button className="flex w-full items-center justify-center gap-2 rounded-md border border-gray-300 bg-white px-4 py-3 text-sm font-bold text-gray-900 shadow-sm transition hover:bg-gray-200 active:scale-[0.99] sm:w-fit cursor-pointer">
+                                          <FaBookOpen className="text-gray-800" />
+                                          <span>BORROW BOOK REQUEST</span>
+                                    </button>
+                              </div>
 
                               {/* Tag Badges */}
                               <div className="mt-4 flex flex-wrap gap-2 sm:gap-3">
@@ -104,7 +121,7 @@ const FeaturedBook = () => {
                                     <span className="rounded bg-blue-600 px-3 py-1.5 text-xs font-medium text-white sm:text-sm">
                                           54 Hug
                                     </span>
-                              </div>
+                               </div>
                         </div>
 
                   </div>
