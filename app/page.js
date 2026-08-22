@@ -1,8 +1,15 @@
+import FeaturedBook from '@/components/Homepage/FeaturedBook'
+import PopularBooks from '@/components/Homepage/PopularBooks'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>Home Page</div>
+    <>
+      <main className="min-h-screen bg-[#080b14] pt-4">
+        <FeaturedBook />
+        <PopularBooks />
+      </main>
+    </>
   )
 }
 
